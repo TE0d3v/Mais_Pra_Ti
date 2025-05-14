@@ -3,12 +3,12 @@
 
 let a = 0;
 let b = 1;
-//o for inicia com 1 e termina com 8 porque os dois primeiros numeros da sequência de fibonacci são 0 e 1.
 
+console.log(a)
+console.log(b)
 for (let i = 1; i <= 8 ; i++){
     let c = a + b;
     a = b;
     b = c;
     console.log(c);
 }
-
