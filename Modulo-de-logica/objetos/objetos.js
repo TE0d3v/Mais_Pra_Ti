@@ -191,10 +191,10 @@ let generoscont = {};
 Locadora.forEach((filme) => {
     //verifica se não existe o genero no array 
     if (!generoscont[filme.genero]) {
-    //se não tiver o genero no array, adiciona o genero no array com o valor 1
-        generoscont[filme.genero]=1
+        //se não tiver o genero no array, adiciona o genero no array com o valor 1
+        generoscont[filme.genero] = 1
     } else {
-    //se tiver o genero no array, adiciona mais um
+        //se tiver o genero no array, adiciona mais um
         generoscont[filme.genero]++
     }
 });
@@ -203,7 +203,7 @@ console.table(generoscont)
 // utilizando for of 
 let generocont = {};
 
-for( let filme of Locadora) {
+for (let filme of Locadora) {
     if (!generocont[filme.genero]) {
         generocont[filme.genero] = 1
     } else {
@@ -213,7 +213,66 @@ for( let filme of Locadora) {
 console.table(generocont)
 
 // fatorial
-fatorial = 1;
-for (let i = 1; i <= 5; i++) {
-    fatorial *= i
+// fatorial = 1;
+// for (let i = 1; i <= 5; i++) {
+//     fatorial *= i
+// }
+// calculando fatorial utilizando recursividade
+function fatorial(n) {
+    if (n === 0) {
+        return 1
+    } else {
+        return n * fatorial(n - 1)
+    }
 }
+console.log(fatorial(5))
+
+function soma(n) {
+    if (n === 0) {
+        return 0
+    } else {
+        return n + soma(n - 1)
+    }
+}
+console.log(soma(5))
+
+function fibbo(n) {
+    if (n === 0) {
+        return 0
+    } else if (n === 1) {
+        return 1
+    } else {
+        return fibbo(n - 1) + fibbo(n - 2)
+    }
+}
+console.log(fibbo(9))
+
+const categorias = [{
+    id: 1,
+    nome: "Eletronicos",
+    filhos: [
+        { id: 2, nome: "Celulares", filhos: [] },
+        {
+            id: 3, nome: "Computadores", filhos: [
+                { id: 4, nome: "Notebooks", filhos: [] }
+            ]
+        },
+    ]
+},
+{
+    id: 5,
+    nome: "Roupas",
+    filhos: []
+}
+]
+
+function imprimirCategorias(lista, nivel = 0){
+    for (let categoria of lista){
+        console.log(" ".repeat(nivel * 2) + categoria.nome)
+        if(categoria.filhos.length > 0){
+            imprimirCategorias(categoria.filhos, nivel + 1)
+        }
+    }
+}
+
+imprimirCategorias(categorias)
