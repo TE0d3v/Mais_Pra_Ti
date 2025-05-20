@@ -92,12 +92,19 @@ let matriz = []
 
 for (i = 1; i <= 3; i++) {
     matriz[i] = [];
-
+    let y = 10
     for (j = 1; j <= 3; j++) {
-        matriz[i][j] = 10;
+        matriz[i][j] = y++;      
     }
 }
 
 console.table(matriz);
 
 // calcular a diagonal de uma matriz
+let somaDiagonal = 0;
+
+for(let i = 1; i <= 3 ; i++){
+    somaDiagonal += matriz[i][i]
+}
+
+console.log(`a soma da diagonal é: `, somaDiagonal)
