@@ -1,5 +1,5 @@
 // // let fruitlist = Array();
-// // let namelist = ['pedro', 'joão', 'marta'];
+let namelist = ['pedro', 'joão', 'marta'];
 
 // // fruitlist[0] = 'banana'
 // // fruitlist[1] = 'maça'
@@ -13,9 +13,9 @@
 // // // mostra o array inteiro com os indices e seus respectivos valores
 // // // console.table(namelist)
 
-// // // for (let i = 0; i < namelist.length; i++) {
-// // //     console.log(namelist[i])
-// // // }
+for (let i = 0; i < namelist.length; i++) {
+    console.log(namelist[i])
+}
 
 // // // adiciona um novo item ao array na ultima posicao
 // // fruitlist.push('abacaxi')
@@ -88,23 +88,23 @@
 // // }
 
 // arrays multidimensionais ou matrizes
-let matriz = []
+// let matriz = []
 
-for (i = 1; i <= 3; i++) {
-    matriz[i] = [];
-    let y = 10
-    for (j = 1; j <= 3; j++) {
-        matriz[i][j] = y++;      
-    }
-}
+// for (i = 1; i <= 3; i++) {
+//     matriz[i] = [];
+//     let y = 10
+//     for (j = 1; j <= 3; j++) {
+//         matriz[i][j] = y++;      
+//     }
+// }
 
-console.table(matriz);
+// console.table(matriz);
 
-// calcular a diagonal de uma matriz
-let somaDiagonal = 0;
+// // calcular a diagonal de uma matriz
+// let somaDiagonal = 0;
 
-for(let i = 1; i <= 3 ; i++){
-    somaDiagonal += matriz[i][i]
-}
+// for(let i = 1; i <= 3 ; i++){
+//     somaDiagonal += matriz[i][i]
+// }
 
-console.log(`a soma da diagonal é: `, somaDiagonal)
+// console.log(`a soma da diagonal é: `, somaDiagonal)
