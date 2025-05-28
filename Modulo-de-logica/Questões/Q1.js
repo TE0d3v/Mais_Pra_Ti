@@ -9,3 +9,4 @@ if (numerO % 2 == 0){
 // Questão 1 com ternário
 // let numero = 20
 // numero % 2 == 0 ? console.log("PAR!") : console.log("IMPAR!");
+// só testando
