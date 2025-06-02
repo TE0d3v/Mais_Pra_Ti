@@ -15,40 +15,4 @@ function palavrasUnicas(string) {
     return palavrasUnicas
 
 }
-console.log(palavrasUnicas("olá olá mundo"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const palavras = string.split(' ');
-// const palavrasUnicas = [];
-
-// for (let i = 0; i < palavras.length; i++) {
-//     if (!palavrasUnicas.includes(palavras[i])) {
-//         palavrasUnicas.push(palavras[i]);
-//     }
-// }
-
-// return palavrasUnicas;
+console.log(palavrasUnicas("olá lindo mundo novo"));
