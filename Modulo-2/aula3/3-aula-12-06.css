@@ -1,0 +1,25 @@
+ img {
+     width: 100%;
+     margin-bottom: 10px;
+ }
+
+ #Daredevil {
+     width: 150px;
+     height: 150px;
+     border-radius: 50%;
+     border: 2px solid #444;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     object-fit: cover;
+ }
+
+ table,
+ tr,
+ td {
+     border: 1px solid;
+ }
+
+ header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
