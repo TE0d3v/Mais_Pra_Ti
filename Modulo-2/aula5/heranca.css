@@ -1,31 +1,43 @@
+/* Estiliza o body */
 body {
     background-color: #ccc;
 }
 
+/* Estiliza o pai */
 .pai {
+    /* Herda o estilo do pai */
     color: green;
     font-family: arial;
     border: 1px solid red;
     margin: 10px;
 }
 
+/* Estiliza os parágrafos */
 p {
+    /* Herda o estilo do pai */
     border: inherit;
     margin: inherit;
 }
 
-article p {
-    color: blue;
+/* Estiliza o artigo */
+article {
+    /* Estiliza os parágrafos do artigo */
+    p {
+        color: blue;
+    }
+
+    /* Estiliza os links do artigo */
+    a {
+        color: green;
+    }
 }
 
-article > a {
-    color: green
-}
-/* Irmão adjancete - Imediatamente próximo */
-h1 + p { 
+/* Estiliza o título e o parágrafo irmão adjacente */
+h1 + p {
     color: red;
 }
 
+/* Estiliza todos os parágrafos irmãos do título */
 h1 ~ p {
     color: red;
 }
