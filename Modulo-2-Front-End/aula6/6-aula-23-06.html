@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6 - FlexBox</title>
+    <style>
+        /* Container que envolve os elementos */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* estiliza cada box */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 10px;
+        }
+
+        /* estiliza as boxs pares */
+        .box:nth-child(2n+2) {
+            background-color: yellow;
+        }
+
+        /* estiliza as boxs impares */
+        .box:nth-child(3n+3) {
+            background-color: green;
+        }
+
+        /* estiliza a direção dos elementos */
+        .container-flex-direction-row {
+            /* direção horizontal */
+            flex-direction: row;
+        }
+
+        .container-flex-direction-column {
+            /* direção vertical */
+            flex-direction: column;
+        }
+
+        .container-flex-direction-row-reverse {
+            /* direção horizontal inversa */
+            flex-direction: row-reverse;
+        }
+
+        .container-flex-direction-column-reverse {
+            /* direção vertical inversa */
+            flex-direction: column-reverse;
+        }
+
+        /* estiliza a justificação dos elementos */
+        .container-justify-content-flex-start {
+            /* justifica no início */
+            justify-content: flex-start;
+        }
+
+        .container-justify-content-center {
+            /* justifica no centro */
+            justify-content: center;
+        }
+
+        .container-justify-content-flex-end {
+            /* justifica no final */
+            justify-content: flex-end;
+        }
+
+        .container-justify-content-space-between {
+            /* justifica com espaçamento entre os elementos */
+            justify-content: space-between;
+        }
+
+        .container-justify-content-space-around {
+            /* justifica com espaçamento ao redor dos elementos */
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula 6 - FlexBox</h1>
+
+    <div class="container container-flex-direction-row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <div class="container container-flex-direction-column">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="
+
