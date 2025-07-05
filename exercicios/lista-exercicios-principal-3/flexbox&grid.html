@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 599px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        @media (min-width: 600px) and (max-width: 899px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 900px) and (max-width: 1199px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .gallery figure {
+            margin: 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .gallery figcaption {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
+    <div class="container">
+        <h1>
+            Galeria de Arte
+        </h1>
+        <div class="gallery">
+            <figure>
+                <img src="https://picsum.photos/id/1015/200/300" alt="Uma imagem qualquer">
+                <figcaption>Imagem 1</figcaption>
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/id/1016/200/300" alt="Uma imagem qualquer">
+                <figcaption>Imagem 2</figcaption>
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/id/1017/200/300" alt="Uma imagem qualquer">
+                <figcaption>Imagem 3</figcaption>
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/id/1018/200/300" alt="Uma imagem qualquer">
+                <figcaption>Imagem 4</figcaption>
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/id/1019/200/300" alt="Uma imagem qualquer">
+                <figcaption>Imagem 5</figcaption>
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/id/1020/200/300" alt="Uma imagem qualquer">
+                <figcaption>Imagem 6</figcaption>
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/id/1021/200/300" alt="Uma imagem qualquer">
+                <figcaption>Imagem 7</figcaption>
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/id/1022/200/300" alt="Uma imagem qualquer">
+                <figcaption>Imagem 8</figcaption>
+            </figure>
+        </div>
+    </div>
+</body>
+</html>
