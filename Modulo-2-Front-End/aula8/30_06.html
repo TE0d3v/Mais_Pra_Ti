@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MaisPraTi</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lista manipulada JS</h1>
+
+        <form id="form-adicionar">
+            <input id="input-item" type="text" placeholder="Adicione algo a lista" required>
+            <button type="submit">Adicionar</button>
+            <button id="btn-limpar">Limpar lista</button>
+        </form>
+
+        <div id="controles">
+            <label for="ordenar">Ordenar Por:</label>
+            <select id="ordenar">
+                <option value="insertion">Por ordem de inserção</option>
+                <option value="status">Por Status</option>
+                <option value="alphabetical">Por Ordem alfabética</option>
+            </select>
+            <label for="filtrar">Filtrar Por:</label>
+            <select id="filtrar">
+                <option value="all">Todos</option>
+                <option value="pending">Pendentes</option>
+                <option value="purchased">Comprados</option>
+            </select>
+        </div>
+
+        <p id="contador">Itens na lista: <span>0</span></p>
+        <ul id="lista-itens">
+            <!-- Itens da lista serão adicionados aqui via JS -->
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+<!-- funcionalidades 
+ marcar como comprado salver esse estado no local storage
+ contador de itens em tempo real OK 
+ adicione filtros para itens comprados e pendentes
+ permita ordenar alfabeticamente ou por status
+ -->
