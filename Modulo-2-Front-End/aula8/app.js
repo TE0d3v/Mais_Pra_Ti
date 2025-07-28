@@ -78,7 +78,7 @@ function renderizarLista() {
 
 formAdicionar.addEventListener('submit', (event) => {
     event.preventDefault()
-    const texto = inputItem.value.trim() // Corrigido: era apenas 'input'
+    const texto = inputItem.value.trim() 
     if (texto === '') return;
 
     itens.push({ text: texto, purchased: false })
@@ -86,7 +86,7 @@ formAdicionar.addEventListener('submit', (event) => {
     salvarDados()
     renderizarLista()
 
-    inputItem.value = '' // Corrigido: era apenas 'input'
+    inputItem.value = '' 
 })
 
 // Adicionado event listener para o botão limpar
