@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de consumo de API</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            margin: 2rem;
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Consulta de endereço por CEP</h1>
+
+    <label for="cep">Digite o CEP:</label>
+    <input type="text" id="cep" name="cep" maxlength="8" minlength="8" placeholder="EX: 01001000" required>
+    <button id="buscar">Buscar endereço</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        const inputCep = document.getElementById('cep')
+        const btnBuscar = document.getElementById('buscar')
+        const divResultado = document.getElementById('resultado')
+
+        function limparCep(cep) {
+            return cep.replace(/\D/g, '')
+        }
+
+
+        async function consultarCep() {
+            divResultado.textContent = ""
+            const cepRaw = inputCep.value
+            const cep = limparCep(cepRaw)
+
+            // Validação do CEP
+            if (cep.length !== 8) {
+                divResultado.innerHTML = `<p class='erro'>CEP deve ter 8 dígitos</p>`
+                return
+            }
+
+            const url = `https://viacep.com.br/ws/${cep}/json/`
+
+            try {
+                const resp = await fetch(url, { method: "GET" })
+
+                if (!resp.ok) {
+                    throw new Error('Erro na requisição')
+                }
+
+                const data = await resp.json()
+
+                // Verificar se o CEP foi encontrado
+                if (data.erro) {
+                    divResultado.innerHTML = `<p class='erro'>CEP ${cep} não encontrado</p>`
+                    return
+                }
+
+                divResultado.innerHTML = `
+                <h2>Endereço Encontrado:</h2>
+                <ul>
+                    <li>Logradouro: ${data.logradouro || 'Não informado'}</li>
+                    <li>Bairro: ${data.bairro || 'Não informado'}</li>
+                    <li>Cidade: ${data.localidade || 'Não informado'}</li>
+                    <li>Estado: ${data.uf || 'Não informado'}</li>
+                    <li>Complemento: ${data.complemento || 'Não informado'}</li>
+                </ul>
+                `
+            } catch (err) {
+                divResultado.innerHTML = `
+                <p class='erro'>Erro ao consultar o CEP ${cep}</p>
+                `
+            }
+        }
+
+        // Mover o addEventListener para fora da função
+        btnBuscar.addEventListener('click', consultarCep)
+    </script>
+</body>
+
+</html>
