@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Cine pop - Buscador de Filmes</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Cine <span>PoP</span></h1>
+        </header>
+
+        <main>
+            <section class="search-container">
+                <div class="search-element">
+                    <h3>Procurar Filme:</h3>
+                    <input type="text" class="form-control" placeholder="Procure por um filme ..." id="movie-search-box"
+                        onkeyup="findMovies()" onclick="findMovies()">
+
+                    <div class="search-list" id="search-list">
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="result-container">
+                <div class="result-grid" id="result-grid">
+                    
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+/* Definindo as variáveis de cor para o projeto */
+:root {
+    --bg-color: #22252D;
+    /* Cor de fundo da página */
+    --calculator-bg: #2A2D37;
+    /* Cor de fundo da calculadora */
+    --display-bg: #22252D;
+    /* Cor de fundo do display */
+    --display-color: #ffffff;
+    /* Cor do texto do display */
+
+    --btn-bg: #282B33;
+    /* Fundo padrão do botão (números) */
+    --btn-color: #ffffff;
+    /* Cor do texto padrão do botão */
+    --btn-hover-bg: #3b3e47;
+    /* Fundo do botão ao passar o mouse */
+
+    --operator-btn-bg: #FF9F0A;
+    /* Fundo do botão de operador */
+    --operator-btn-hover-bg: #ffb03a;
+
+    --equals-btn-bg: #4CAF50;
+    /* Fundo do botão de igual */
+    --equals-btn-hover-bg: #5cb85c;
+
+    --clear-btn-bg: #d9534f;
+    /* Fundo do botão de limpar */
+    --clear-btn-hover-bg: #e06c68;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+.calculadora {
+    background-color: var(--calculator-bg);
+    max-width: 350px; 
+    width: 100%;     
+    border-radius: 15px;
+    padding: 20px;    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
+
+input {
+    background-color: var(--display-bg); 
+    color: var(--display-color);
+    border: none;
+    width: 100%;
+    height: 80px;
+    font-size: 2.5rem; 
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px; 
+    border-radius: 10px;
+}
+
+.keypad {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.keypad-row {
+    display: flex;
+    gap: 15px; 
+}
+
+button {
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+    border: none;
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    cursor: pointer;
+     transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+
+
+.operator {
+    background-color: var(--operator-btn-bg);
+}
+
+.operator:hover {
+    background-color: var(--operator-btn-hover-bg);
+}
+
+.equals {
+    background-color: var(--equals-btn-bg);
+}
+
+.equals:hover {
+    background-color: var(--equals-btn-hover-bg);
+}
+
+.clear {
+    background-color: var(--clear-btn-bg);
+}
+
+.clear:hover {
+    background-color: var(--clear-btn-hover-bg);
+}
